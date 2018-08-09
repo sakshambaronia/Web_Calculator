@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shape Calculator</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/shapecalculator.css">
+</head>
+<body style="width: 100%">
+		<div class="container" >
+			<img src="../images/header_bg.gif" style="width:100%">
+			<h1><div class="top-left">Shape Calculator</div></h1>
+		</div>
+		<div class ="info">
+			<h3>Welcome to Shape Calculator</h3>
+			<p><b>Shape Calculator is an interactive web application. To the right you will find the 3 step application. Follow the instructions in each step. Clicking cancel will take you back to step 1. Enjoy!</b></p>
+			<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.</p>
+		</div>
+		<div class="shapeSelection" id="shapeSelection" style="display: block;"> 
+			<h3 align="center">Step 1. Select your shape</h3>
+			<p>Please select the shape that you would like to calculate the area of and press the button "Proceed"</p>
+			<form id="shapeselector" method="post">
+  				<input type="radio" id="1" name="shape" value="rectangle" onclick="myFunction(this.value)"> Rectangle<br>
+  				<input type="radio" id="2" name="shape" value="square" onclick="myFunction(this.value)"> Square<br>
+  				<input type="radio" id="3" name="shape" value="circle" onclick="myFunction(this.value)"> Circle<br> 
+  				<input type="radio" id="4" name="shape" value="eclipse" onclick="myFunction(this.value)"> Eclipse
+  				<div align="center" style="margin-top: 30px">
+				<input type="submit" id="submit" name="submit" value="Proceed">
+				<input type="submit" id="cancel" name="cancel" value="Cancel">
+				</div>
+			</form> 
+		</div>
+
+		<div class="shapedimensioninput" id="shapedimensioninput" style="display: none;"> 
+			<h3 align="center">Step 2 : Insert your values</h3>
+			<p>You have selected a <output id="result"></output> , please input the required variables.</p>
+			<form id="shapedimensions" method="post" >
+				<div id="circleProperty">
+				  	Diameter <input type="text" id="diameter" name="diameter" value="0">	
+				</div>
+				<div id="rectangleProperty">
+				  	Length <input type="text" id="length" name="length" value="0"><br>
+				  	Width <input type="text" id="width" name="width" value="0">	
+				</div>
+				<div id="squareProperty">
+				  	Side <input type="text" id="side" name="side" value="0">	
+				</div>
+				<div id="eclipseProperty">
+				  	Height <input type="text" id="eclipseHeight" name="eclipseHeight" value="0"><br>	
+				  	Width <input type="text" id="eclipseWidth" name="eclipseWidth" value="0">
+				</div>
+  				
+  				<div align="center" style="margin-top: 30px">
+				<input type="submit" id="calculateResult" name="calculateResult" value="Calculate Area">
+				</div>
+			</form> 
+		</div>
+		<div class="shapeCalculation" id="shapeCalculation" style="display: none;"> 
+			<h3 align="center">Step 3. Result</h3>
+			<p>You have calculated the area of a <strong id="shapeObject" style="display: inline;"></strong> with <strong id="parameters" style="display: inline;"></strong>. Below is your result:</p>
+			<form id="shapecalculate" method="post">
+  				<div style="text-align: center;"><b>The Area is <div id="output" style="display: inline;"></div></b>.</div>
+  				<div align="center" style="margin-top: 30px">
+				<input type="submit" id="submit" name="submit" value="Start Over">
+				</div>
+			</form> 
+		</div>
+
+		<script>
+		function myFunction(shape) {
+    		document.getElementById("result").value = shape;
+		}
+		</script>
+
+	<script type="text/javascript" src="../js/shapeCalculator.js"></script>
+</body>
+</html>

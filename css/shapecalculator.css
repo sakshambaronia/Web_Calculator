@@ -1,0 +1,38 @@
+
+.info{
+	float: left;
+	width: 40%;
+	font-family: arial;
+	font-size: 14px;
+	margin-left: 2%;
+	margin-top: 2%;
+	display:inline;
+}
+
+.shapeSelection,.shapedimensioninput,.shapeCalculation{
+	position: static;
+	float: left;
+	width: 23%;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-top: 2%;
+	margin-left: 8%;
+	font-family: arial;
+	font-size: 14px;
+	display: inline;
+	padding: 5px 15px 15px 15px;
+}
+
+input[type=text] {
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 2px 2px 2px 2px;
+    margin-top: 10px;
+    margin-left: ;
+}
+
+.top-left {
+    position: absolute;
+    top:50px;
+    left: 16px;
+}
